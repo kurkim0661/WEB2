@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>WEB1 - Welcome</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://kurkim0661.github.io/WEB1/StyleSheet1.css">
+	<link rel="stylesheet" href="css/jquery.treeview.css" />
+	<link rel="stylesheet" href="css/screen.css" />
+	<link rel="stylesheet" href="https://kurkim0661.github.io/WEB1/css/styles/atom-one-dark-reasonable.css">
+	<script src="https://kurkim0661.github.io/WEB1/css/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js"></script>
+	<script>hljs.initLineNumbersOnLoad({singleLine: true});</script>
+	<script src="lib/jquery.js" type="text/javascript"></script>
+	<script src="lib/jquery.cookie.js" type="text/javascript"></script>
+	<script src="lib/jquery.treeview.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		$(function() {
+			$("#tree").treeview({
+				collapsed: true,
+				animated: "medium",
+				control:"#sidetreecontrol",
+				persist: "location"
+			});
+		})
+		
+	</script>
+    
+</head>
+<body>
+    <h1><a href="https://kurkim0661.github.io/WEB1/index.html">WEB</a></h1>
+        
+    <div id="grid">
+        <div id="sidetree">
+            <div class="treeheader">&nbsp;</div>
+
+            <div id="sidetreecontrol"><a href="?#">전체 닫기</a> | <a href="?#">전체 열기</a></div>
+            <ul id="tree">
+                <li>
+                    <a href="https://kurkim0661.github.io/WEB1/1.html">HTML</a>
+                    <ul>
+                        <li><a href="#">서브메뉴</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://kurkim0661.github.io/WEB1/2.html">CSS</a>
+                    <ul>
+                        <li><a href="#">첫번째 서브메뉴</a></li>               
+                        <li>
+                            <a href="#">두번째 서브메뉴</a>
+                            <ul>
+                                <li><a href="#">서브메뉴 속 첫번째 서브메뉴</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                
+                </li>
+                <li>
+                    <a href="https://kurkim0661.github.io/WEB1/3.html">JavaScript</a>
+                    <ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://kurkim0661.github.io/WEB1/Patterns.html">Patterns</a>
+                    <ul>
+                        <li>
+				<a href="https://kurkim0661.github.io/WEB1/Patterns/Singletone.html">
+                            Singleton
+				</a>
+                        </li>
+                        <li>
+				<a href="https://kurkim0661.github.io/WEB1/Patterns/Observer.html">
+                            Observer
+				</a>
+                        </li>
+                        <li>
+				<a href="https://kurkim0661.github.io/WEB1/Patterns/Visitor.html">
+                            Visitor
+				</a>
+                        </li>
+                        <li>
+				<a href="https://kurkim0661.github.io/WEB1/Patterns/Iterator.html">
+                            Iterator
+				</a>
+                        </li>
+                        <li>
+				<a href="https://kurkim0661.github.io/WEB1/Patterns/Mediator.html">
+                            Mediator
+				</a>
+                        </li>
+                        <li>
+				<a href="https://kurkim0661.github.io/WEB1/Patterns/Chain of Responsibility.html">
+                            Chain of Responsibility
+				</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://kurkim0661.github.io/WEB1/algorithm.html">Algorithm</a>
+                    <ul>
+                        <li>
+  <a href="https://kurkim0661.github.io/WEB1/algorithm.html">Algorithm</a>
+                    <ul>
+                        <li>
+                            <a href="https://kurkim0661.github.io/WEB1/algorithm/greedy.html">greedy</a>
+			<ul>
+				<li>
+					<a href="https://kurkim0661.github.io/WEB1/algorithm/도시락데우기.html">도시락데우기</a>
+				</li>
+        <li>
+        <a href="https://kurkim0661.github.io/WEB1/algorithm/문자열합치기.html">문자열합치기</a>
+        </li>
+        <li>
+        <a href="https://kurkim0661.github.io/WEB1/algorithm/Minas Tirith.html">Minas Tirith</a>
+        </li>
+			</ul>  
+                        </li>
+                        <li>
+                             <a href="https://kurkim0661.github.io/WEB1/algorithm/tree.html">tree</a>
+			<ul>
+				<li>
+					blah blah
+				</li>
+			</ul>  
+                        </li>
+                        <li>
+				<a href="https://kurkim0661.github.io/WEB1/algorithm/BFS.html">BFS</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+</div>
+                             
+	<div id="article">
+		<h2>Algorithm</h2>
+			<p>
+				<pre>
+					<code class="c++" style="font-size: 15px; width:1000px">#include &lt;iostream&gt;
+#include &lt;cstring&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;string&gt;
+using namespace std;
+
+//-1은 아직 답이 계산되지 않았음을 의미
+//1은 해당 입력들이 서로 대응됨을 의미
+//0은 해당 입력들이 서로 대응되지 않음을 의미
+int cache[101][101]; //최대 길이가 100이므로 '\n' 포함
+string wildCard, fileName;
+
+//완전 탐색 알고리즘을 이용(시간 초과)
+/*
+//와일드카드 패턴 w가 문자열 s에 대응되는지 여부를 반환
+bool match(const string &w, const string &s)
+{
+	//w[pos]와 s[pos]를 맞춰나간다
+	int pos = 0;
+	while (pos < s.size() && pos < w.size() && (w[pos] == '?' || w[pos] == s[pos]))
+		   pos++;
+	//더 이상 대응할 수 없으면 왜 while문이 끝났는지 확인
+	//패턴 끝에 도달해서 끝난 경우: 문자열도 끝났어야 대응됨
+	if (pos == w.size())
+		   return pos == s.size();
+	//*를 만나서 끝난 경우: *에 몇 글자를 대응해야 할지 재귀 호출하면서 확인
+	if (w[pos] == '*')
+		   for (int skip = 0; pos + skip <= s.size(); skip++)
+			   if (match(w.substr(pos + 1), s.substr(pos + skip)))
+				  return true;
+	//이 외의 경우에는 모두 대응되지 않는다
+	return false;
+}
+*/
+
+//동적계획법 이용
+int matchMemoized(int w, int f)
+{
+	//메모이제이션
+	int &result = cache[w][f];
+	if (result != -1)
+		   return result;
+	//wildCard[w]와 fileName[f] 맞춰나감
+	//1번째 방법
+	/*
+	while (f < fileName.size() && w < wildCard.size() && (wildCard[w] == '?' || wildCard[w] == fileName[f]))
+	{
+		   w++;
+		   f++;
+	}
+	*/
+	//2번째 방법
+	if (w < wildCard.size() && f < fileName.size() && (wildCard[w] == '?' || wildCard[w] == fileName[f]))
+		   return result = matchMemoized(w + 1, f + 1);
+	//더 이상 대응할 수 없으면 왜 while문이 끝났는지 확인
+	//패턴 끝에 도달해서 끝난 경우: 문자열도 끝났어야 한다
+	if (w==wildCard.size() && f==fileName.size())
+		   return result = 1;
+	//*를 만나서 끝난 경우: *에 몇 글자를 대응해야 할지 재귀호출하면서 확인
+	//1번째 방법
+	/*
+	if (wildCard[w] == '*')
+		   for (int skip = 0; skip + f <= fileName.size(); skip++)
+			   if (matchMemoized(w + 1, f + skip))
+				  return result = 1;
+	*/
+	//2번째 방법
+	if (wildCard[w] == '*')
+	{
+		   if (matchMemoized(w + 1, f) || (f < fileName.size() && matchMemoized(w, f + 1))) //*에 문자를 대응하지 않을지 아니면 한 글자 더 대응할지
+			   return result = 1;
+	}
+	//이 외의 경우에는 모두 대응되지 않는다
+	return result = 0;
+}
+
+int main(void)
+{
+	int test_case;
+	cin >> test_case;
+	if (test_case < 1 || test_case>10)
+		   exit(-1);
+
+	for (int i = 0; i < test_case; i++)
+	{
+		   vector<string> v;
+		   cin >> wildCard;
+		   int fileNum;
+		   cin >> fileNum;
+		   if (fileNum < 1 || fileNum>50)
+			   exit(-1);
+		   for (int j = 0; j < fileNum; j++)
+		   {
+			   memset(cache, -1, sizeof(cache));
+			   cin >> fileName;
+			   if (matchMemoized(0, 0) == 1) //조건 성립할 때만 벡터에 삽입
+				  v.push_back(fileName);
+		   }
+		   sort(v.begin(), v.end()); //정렬을 하고
+		   for (int j = 0; j < v.size(); j++) //출력
+			   cout << v[j] << endl;
+		   cout << endl;
+	}
+	return 0;
+}
+					</code>
+				</pre>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

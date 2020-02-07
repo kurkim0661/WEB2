@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>WEB1 - Html</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://kurkim0661.github.io/WEB1/StyleSheet1.css">
+    <link rel="stylesheet" href="css/jquery.treeview.css" />
+    <link rel="stylesheet" href="css/screen.css" />
+    <link rel="stylesheet" href="StyleSheet2.css" />
+    <script src="lib/jquery.js" type="text/javascript"></script>
+    <script src="lib/jquery.cookie.js" type="text/javascript"></script>
+    <script src="lib/jquery.treeview.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#tree").treeview({
+                collapsed: true,
+                animated: "medium",
+                control: "#sidetreecontrol",
+                persist: "location"
+            });
+        })
+
+    </script>
+
+</head>
+<body>
+    <h1><a href="https://kurkim0661.github.io/WEB1/index.html">WEB</a></h1>
+        
+    <div id="grid">
+        <div id="sidetree">
+            <div class="treeheader">&nbsp;</div>
+
+            <div id="sidetreecontrol"><a href="?#">전체 닫기</a> | <a href="?#">전체 열기</a></div>
+            <ul id="tree">
+                <li>
+                    <a href="https://kurkim0661.github.io/WEB1/1.html">HTML</a>
+                    <ul>
+                        <li><a href="#">서브메뉴</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://kurkim0661.github.io/WEB1/2.html">CSS</a>
+                    <ul>
+                        <li><a href="#">첫번째 서브메뉴</a></li>               
+                        <li>
+                            <a href="#">두번째 서브메뉴</a>
+                            <ul>
+                                <li><a href="#">서브메뉴 속 첫번째 서브메뉴</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                
+                </li>
+                <li>
+                    <a href="https://kurkim0661.github.io/WEB1/3.html">JavaScript</a>
+                    <ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://kurkim0661.github.io/WEB1/Patterns.html">Patterns</a>
+                    <ul>
+                        <li>
+							<a href="https://kurkim0661.github.io/WEB1/Patterns/Singletone.html">Singleton</a>
+									</li>
+									<li>
+							<a href="https://kurkim0661.github.io/WEB1/Patterns/Observer.html">Observer</a>
+									</li>
+									<li>
+							<a href="https://kurkim0661.github.io/WEB1/Patterns/Visitor.html">Visitor</a>
+									</li>
+									<li>
+							<a href="https://kurkim0661.github.io/WEB1/Patterns/Iterator.html">Iterator</a>
+									</li>
+									<li>
+							<a href="https://kurkim0661.github.io/WEB1/Patterns/Mediator.html">Mediator</a>
+									</li>
+									<li>
+							<a href="https://kurkim0661.github.io/WEB1/Patterns/Chain of Responsibility.html">Chain of Responsibility</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://kurkim0661.github.io/WEB1/algorithm.html">Algorithm</a>
+                    <ul>
+                        <li>
+                            <a href="https://kurkim0661.github.io/WEB1/algorithm/greedy.html">greedy</a>
+							<ul>
+								<li>
+										<a href="https://kurkim0661.github.io/WEB1/algorithm/도시락데우기.html">도시락데우기</a>
+								</li>
+								 <li>
+								<a href="https://kurkim0661.github.io/WEB1/algorithm/문자열합치기.html">문자열합치기</a>
+								</li>
+								<li>
+									<a href="https://kurkim0661.github.io/WEB1/algorithm/Minas Tirith.html">Minas Tirith</a>
+								</li>
+							</ul> 
+                        </li>
+                        <li>
+	                        <a href="https://kurkim0661.github.io/WEB1/algorithm/tree.html">tree</a>
+							<ul>
+								<li>
+									blah blah
+								</li>
+							</ul>  
+                        </li>
+                        <li>
+							<a href="https://kurkim0661.github.io/WEB1/algorithm/BFS.html">BFS</a>
+                        </li>
+						<li>
+							<a href="https://kurkim0661.github.io/WEB1/algorithm/dynamic.html">dynamic</a>
+							<ul>
+								<li>
+									<a href="https://kurkim0661.github.io/WEB1/algorithm/dynamic/quantize.html">quantize</a>
+								</li>
+							</ul>
+						</li>
+                    </ul>
+                </li>
+            </ul>
+	</div>
+        <div id="article" style="margin: 0 auto;
+                                 padding-left: 0">
+            <h2 class="subtitle">Patterns Relationship</h2>
+            <p>
+                <div class="wrapper" style="padding-left: 40px;
+                                            padding-right: 40px;">
+                    <div class="item1">
+                        <figure class="snip1432">
+                            <img src="https://kurkim0661.github.io/WEB1/image/singletone.jpg" alt="sample36" />
+                            <figcaption class="sub">
+                                <div>
+                                    <h3>Type : Structual</h3>
+                                    <h3>let's see singletone</h3>
+                                </div>
+                                <div>
+                                    <h2 class="sub">Singletone</h2>
+                                </div>
+                            </figcaption>
+                            <a href="https://kurkim0661.github.io/WEB1/Patterns/Singleton.html"></a>
+                        </figure>
+                    </div>
+                    <div class="item2">
+                        <figure class="snip1432">
+                            <img src="https://kurkim0661.github.io/WEB1/image/visitor.jfif" alt="sample83" />
+                            <figcaption class="sub">
+                                <div>
+                                    <h3>Type : Structual</h3>
+                                    <h3>Let's see Visitor</h3>
+                                </div>
+                                <div>
+                                    <h2 class="sub">Visitor</h2>
+                                </div>
+                            </figcaption>
+                            <a href="https://kurkim0661.github.io/WEB1/Patterns/Visitor.html"></a>
+                        </figure>
+                    </div>
+                    <div class="item3">
+                        <figure class="snip1432">
+                            <img src="https://kurkim0661.github.io/WEB1/image/iterator.jfif" alt="sample83" />
+                            <figcaption class="sub">
+                                <div>
+                                    <h3>Type : Structual</h3>
+                                    <h3>Let's see Iterator</h3>
+                                </div>
+                                <div>
+                                    <h2 class="sub">Iterator</h2>
+                                </div>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                    </div>
+
+                    <div class="item4">
+                        <figure class="snip1432">
+                            <img src="https://kurkim0661.github.io/WEB1/image/observer.jpg" alt="sample83" />
+                            <figcaption class="sub">
+                                <div>
+                                    <h3>Type : Structual</h3>
+                                    <h3>Let's see Observer</h3>
+                                </div>
+                                <div>
+                                    <h2 class="sub">Observer</h2>
+                                </div>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                    </div>
+
+                    <div class="item5">
+                        <figure class="snip1432">
+                            <img src="https://kurkim0661.github.io/WEB1/image/mediator.jpg" alt="sample45" />
+                            <figcaption class="sub">
+                                <div>
+                                    <h3>Type : Behavioral</h3>
+                                    <h3>Let's see mediator </h3>
+                                </div>
+                                <div>
+                                    <h2 class="sub">Mediator</h2>
+                                </div>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                    </div>
+                    <div class="item6">
+                        <figure class="snip1432">
+                            <img src="https://kurkim0661.github.io/WEB1/image/chain.jpg" alt="sample45" />
+                            <figcaption class="sub">
+                                <div>
+                                    <h3>Type : Behavioral</h3>
+                                    <h3>Let's see Chain of Responsibility </h3>
+                                </div>
+                                <div>
+                                    <h2 class="sub">Chain of Responsibility</h2>
+                                </div>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                    </div>
+                </div>
+            </p>
+</body>
+</html>

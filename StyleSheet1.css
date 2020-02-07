@@ -1,0 +1,126 @@
+#sidetree {
+   	font-size: 18px;
+	border-right: 2px solid gray;
+	padding-left: 5px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	margin: 0;   
+}
+#grid {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: 1fr; 
+}
+
+#grid ol {
+    border-right: 2px solid gray;
+    padding-left: 33px;
+    padding-top: 10px;
+    margin: 0;
+}
+
+#grid #article {
+    padding-left: 25px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+h1, h2 {
+	font-family: 'trebuchet ms', verdana, arial;	
+}
+h1 {
+    border-bottom: 2px solid gray;
+    text-align: center;
+    font-size: 70px;
+    margin: 0;
+}
+
+h2 {
+	font-size: 40px;	
+}
+.sub {
+	font-size:1.5em;	
+}
+
+p {
+	font-size: 20px;	
+}
+
+#active {
+    color: red;
+}
+
+.saw {
+    color: gray;
+}
+
+.active {
+    color: red;
+}
+
+
+.tree{
+  color:#393939;
+}
+
+.tree, .tree ul{
+  list-style: none;
+  padding-left:17px;
+}
+.tree *:before{
+  width:17px;
+  height:17px;
+  display:inline-block;
+}
+.tree label{
+  cursor: pointer;
+}
+.tree label:before{
+  content:'\f256';
+  font-family: fontello;
+}
+.tree a{
+  text-decoration: none;
+  color:#393939;
+}
+.tree a:before{
+  content:'\e800';
+  font-family: fontello;
+}
+.tree input[type="checkbox"] {
+    display: none;   
+}
+.tree input[type="checkbox"]:checked~ul {
+  display: none;
+}
+.tree input[type="checkbox"]:checked+label:before{
+  content:'\f255';
+  font-family: fontello;
+} 
+.subtitle {
+	text-align: center;	
+}
+@media(max-width:715px) {
+	#grid {
+	display: block;
+	}
+
+	#grid ol {
+	    border-right: none;
+	}
+
+	h1 {
+	border-bottom: none;
+	}
+
+	#sidetree {
+   	font-size: 15px;
+	border-right: 2px solid gray;
+	padding-left: 20px;
+	padding-top: 10px;
+	margin: 0;  
+    }
+}

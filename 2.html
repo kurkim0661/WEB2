@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>WEB1 - Web</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://kurkim0661.github.io/WEB1/StyleSheet1.css">
+    <link rel="stylesheet" href="css/jquery.treeview.css" />
+    <link rel="stylesheet" href="css/screen.css" />
+   
+    <script src="lib/jquery.js" type="text/javascript"></script>
+    <script src="lib/jquery.cookie.js" type="text/javascript"></script>
+    <script src="lib/jquery.treeview.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+		$(function() {
+			$("#tree").treeview({
+				collapsed: true,
+				animated: "medium",
+				control:"#sidetreecontrol",
+				persist: "location"
+			});
+		})
+		
+	</script>
+    
+</head>
+<body>        
+    <h1><a href="https://kurkim0661.github.io/WEB1/index.html">WEB</a></h1>
+        
+    <div id="grid">
+        <div id="sidetree">
+            <div class="treeheader">&nbsp;</div>
+
+            <div id="sidetreecontrol"><a href="?#">전체 닫기</a> | <a href="?#">전체 열기</a></div>
+            <ul id="tree">
+                <li>
+                    <a href="https://kurkim0661.github.io/WEB1/1.html">HTML</a>
+                    <ul>
+                        <li><a href="#">서브메뉴</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://kurkim0661.github.io/WEB1/2.html">CSS</a>
+                    <ul>
+                        <li><a href="#">첫번째 서브메뉴</a></li>               
+                        <li>
+                            <a href="#">두번째 서브메뉴</a>
+                            <ul>
+                                <li><a href="#">서브메뉴 속 첫번째 서브메뉴</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                
+                </li>
+                <li>
+                    <a href="https://kurkim0661.github.io/WEB1/3.html">JavaScript</a>
+                    <ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://kurkim0661.github.io/WEB1/Patterns.html">Patterns</a>
+                    <ul>
+                        <li>
+							<a href="https://kurkim0661.github.io/WEB1/Patterns/Singletone.html">Singleton</a>
+									</li>
+									<li>
+							<a href="https://kurkim0661.github.io/WEB1/Patterns/Observer.html">Observer</a>
+									</li>
+									<li>
+							<a href="https://kurkim0661.github.io/WEB1/Patterns/Visitor.html">Visitor</a>
+									</li>
+									<li>
+							<a href="https://kurkim0661.github.io/WEB1/Patterns/Iterator.html">Iterator</a>
+									</li>
+									<li>
+							<a href="https://kurkim0661.github.io/WEB1/Patterns/Mediator.html">Mediator</a>
+									</li>
+									<li>
+							<a href="https://kurkim0661.github.io/WEB1/Patterns/Chain of Responsibility.html">Chain of Responsibility</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://kurkim0661.github.io/WEB1/algorithm.html">Algorithm</a>
+                    <ul>
+                        <li>
+                            <a href="https://kurkim0661.github.io/WEB1/algorithm/greedy.html">greedy</a>
+							<ul>
+								<li>
+										<a href="https://kurkim0661.github.io/WEB1/algorithm/도시락데우기.html">도시락데우기</a>
+								</li>
+								 <li>
+								<a href="https://kurkim0661.github.io/WEB1/algorithm/문자열합치기.html">문자열합치기</a>
+								</li>
+								<li>
+									<a href="https://kurkim0661.github.io/WEB1/algorithm/Minas Tirith.html">Minas Tirith</a>
+								</li>
+							</ul> 
+                        </li>
+                        <li>
+	                        <a href="https://kurkim0661.github.io/WEB1/algorithm/tree.html">tree</a>
+							<ul>
+								<li>
+									blah blah
+								</li>
+							</ul>  
+                        </li>
+                        <li>
+							<a href="https://kurkim0661.github.io/WEB1/algorithm/BFS.html">BFS</a>
+                        </li>
+						<li>
+							<a href="https://kurkim0661.github.io/WEB1/algorithm/dynamic.html">dynamic</a>
+							<ul>
+								<li>
+									<a href="https://kurkim0661.github.io/WEB1/algorithm/dynamic/quantize.html">quantize</a>
+								</li>
+							</ul>
+						</li>
+                    </ul>
+                </li>
+            </ul>
+	</div>
+        <div id="article">
+            <h2>CSS</h2>
+            Many thanks for all the ways you have made the Web work for everyone in 2019,
+            and for all the work we will accomplish together in 2020.<br />
+
+            <p>
+                <a href="https://www.w3.org/" target="_blank" title="W3C main homepage">W3C</a> wishes you a happy holiday season
+                and all the best for the new year!
+            </p>
+
+            <p>
+                From all of us at the World Wide Web Consortium.
+            </p>
+
+            <p style="margin-top:40px;">
+                This CSS module defines CSS support for various international writing modes and their combinations,
+                including left-to-right and right-to-left text ordering as well as horizontal and vertical orientations.
+                These new CSS features allow a mixture of horizontal and vertical text regions on the same page.
+                The specification also adds support for such things as isolation in bidirectional text,
+                glyph orientation controls, and short, inline horizontal runs in lines of vertical text.
+            </p>
+            <p>
+                Please, read our press release for additional information and acknowledgements.
+            </p>
+            <img src="C:\Users\jihwan\Desktop\WEB/jihwan.jpg" width="50%">
+        </div>
+        
+    </div>
+    
+
+</body>
+</html>

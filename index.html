@@ -1,25 +1,142 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <title>분리된 HTML</title>
-  <script src="https://kurkim0661.github.io/WEB2/package-lock.json"></script>
-  <script src="https://kurkim0661.github.io/WEB2/package.json"></script>
-  <script src="https://kurkim0661.github.io/WEB2/main.js"></script>
-  <script src="https://kurkim0661.github.io/WEB2/public/js/includeHTML.js"></script>
-  <script src="https://kurkim0661.github.io/WEB2/public/js/includeRouter.js"></script>
+    <title>WEB1 - Welcome</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://kurkim0661.github.io/WEB1/StyleSheet1.css">
+    <link rel="stylesheet" href="css/jquery.treeview.css" />
+    <link rel="stylesheet" href="css/screen.css" />
+   
+    <script src="lib/jquery.js" type="text/javascript"></script>
+    <script src="lib/jquery.cookie.js" type="text/javascript"></script>
+    <script src="lib/jquery.treeview.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+		$(function() {
+			$("#tree").treeview({
+				collapsed: true,
+				animated: "medium",
+				control:"#sidetreecontrol",
+				persist: "location"
+			});
+		})
+		
+	</script>
+    
 </head>
 <body>
-  <header include-html="https://kurkim0661.github.io/WEB2/public/html/header.html"></header>
-  <nav include-html="https://kurkim0661.github.io/WEB2/public/html/nav.html"></nav>
-  <article include-html="https://kurkim0661.github.io/WEB2/public/html/article.html"></article>
-  <footer include-html="https://kurkim0661.github.io/WEB2/public/html/footer.html"></footer>
-  <h1>jihwan</h1>
+    <h1><a href="https://kurkim0661.github.io/WEB1/index.html">WEB</a></h1>
+        
+    <div id="grid">
+        <div id="sidetree">
+            <div class="treeheader">&nbsp;</div>
+
+            <div id="sidetreecontrol"><a href="?#">전체 닫기</a> | <a href="?#">전체 열기</a></div>
+            <ul id="tree">
+                <li>
+                    <a href="https://kurkim0661.github.io/WEB1/1.html">HTML</a>
+                    <ul>
+                        <li><a href="#">서브메뉴</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://kurkim0661.github.io/WEB1/2.html">CSS</a>
+                    <ul>
+                        <li><a href="#">첫번째 서브메뉴</a></li>               
+                        <li>
+                            <a href="#">두번째 서브메뉴</a>
+                            <ul>
+                                <li><a href="#">서브메뉴 속 첫번째 서브메뉴</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                
+                </li>
+                <li>
+                    <a href="https://kurkim0661.github.io/WEB1/3.html">JavaScript</a>
+                    <ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://kurkim0661.github.io/WEB1/Patterns.html">Patterns</a>
+                    <ul>
+                        <li>
+				<a href="https://kurkim0661.github.io/WEB1/Patterns/Singletone.html">
+                            Singleton
+				</a>
+                        </li>
+                        <li>
+				<a href="https://kurkim0661.github.io/WEB1/Patterns/Observer.html">
+                            Observer
+				</a>
+                        </li>
+                        <li>
+				<a href="https://kurkim0661.github.io/WEB1/Patterns/Visitor.html">
+                            Visitor
+				</a>
+                        </li>
+                        <li>
+				<a href="https://kurkim0661.github.io/WEB1/Patterns/Iterator.html">
+                            Iterator
+				</a>
+                        </li>
+                        <li>
+				<a href="https://kurkim0661.github.io/WEB1/Patterns/Mediator.html">
+                            Mediator
+				</a>
+                        </li>
+                        <li>
+				<a href="https://kurkim0661.github.io/WEB1/Patterns/Chain of Responsibility.html">
+                            Chain of Responsibility
+				</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://kurkim0661.github.io/WEB1/algorithm.html">Algorithm</a>
+                    <ul>
+                        <li>
+                            <a href="https://kurkim0661.github.io/WEB1/algorithm/greedy.html">greedy</a>
+			<ul>
+				<li>
+					<a href="https://kurkim0661.github.io/WEB1/algorithm/도시락데우기.html">도시락데우기</a>
+				</li>
+        <li>
+        <a href="https://kurkim0661.github.io/WEB1/algorithm/문자열합치기.html">문자열합치기</a>
+        </li>
+        <li>
+        <a href="https://kurkim0661.github.io/WEB1/algorithm/Minas Tirith.html">Minas Tirith</a>
+        </li>
+			</ul>  
+                        </li>
+                        <li>
+                             <a href="https://kurkim0661.github.io/WEB1/algorithm/tree.html">tree</a>
+			<ul>
+				<li>
+					blah blah
+				</li>
+			</ul>  
+                        </li>
+                        <li>
+				<a href="https://kurkim0661.github.io/WEB1/algorithm/BFS.html">BFS</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+</div>
+                             
+        <div id="article">
+            <h2>WEB</h2>
+            <p>
+            	Welcome to jihwan's blog...
+	    	This is my first webpage.
+            </p>
+        </div>
+
+    </div>
+
+
 </body>
-<script>
-includeHTML( function () {
-  includeRouter( function () {
-    // do something in the future
-  });
-});
-</script>
 </html>
