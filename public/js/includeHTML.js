@@ -11,6 +11,7 @@ function includeHTML(callback) {
       if (file) {
         /*make an HTTP request using the attribute value as the file name:*/
         xhr = new XMLHttpRequest();
+        xhr.async = false; 
         xhr.onreadystatechange = function() {
           if (this.readyState == 4) {
             if (this.status == 200) {elmnt.innerHTML = this.responseText;}
@@ -19,7 +20,8 @@ function includeHTML(callback) {
             elmnt.removeAttribute('include-html');
             includeHTML(callback);
           }
-        }      
+        }
+        
         xhr.open('GET', file, true);
         xhr.send();
         /*exit the function:*/
